@@ -1,8 +1,8 @@
 
-function CartWidget() {
+function CartWidget({imgUrl}) {
 
     return(
-        <img src="./img/carrito"/>
+        <img src={imgUrl} width="40px" className="mx-5"/>
     )
 };
 

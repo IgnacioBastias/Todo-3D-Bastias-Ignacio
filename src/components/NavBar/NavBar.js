@@ -1,4 +1,5 @@
 import CartWidget from "./CartWidget"
+import carritoImg from "../img/carrito.png"
 
 
 function NavBar() {
@@ -30,7 +31,7 @@ function NavBar() {
                     </ul>
                 </div>
             </div>
-            <CartWidget />
+            <CartWidget imgUrl={carritoImg}/>
         </nav>
     )
 }
