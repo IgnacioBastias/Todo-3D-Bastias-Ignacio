@@ -2,7 +2,7 @@
 function CartWidget() {
 
     return(
-        <img src="./img/carrito"/>
+        <img src=".src/assets/img/carrito"/>
     )
 };
 

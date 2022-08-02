@@ -1,8 +1,13 @@
 
+import ItemCount from `ItemCount`;
+
 function ItemListContainer({ text }) {
 
     return(
-        <h1>{ text }</h1>
+        <div>
+            <h1>{ text }</h1>
+            <ItemCount/>
+        </div>
     )
 };
 
