@@ -1,8 +1,9 @@
+import React from 'react'
 
 function CartWidget({imgUrl}) {
 
     return(
-        <img src=".src/assets/img/carrito"/>
+        <img src={imgUrl} width="60px" className='mx-5 my-2' />
     )
 };
 
