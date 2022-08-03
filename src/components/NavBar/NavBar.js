@@ -1,6 +1,6 @@
 import React from 'react'
 import CartWidget from "./CartWidget"
-import carritoImg from "../img/cart.png"
+import carritoImg from "../../assets/img/cart.png"
 
 
 function NavBar() {
