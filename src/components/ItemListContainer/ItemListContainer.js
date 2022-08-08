@@ -1,13 +1,33 @@
-import React from 'react'
-import ItemCount from "./ItemCount";
+import React, { useState, useEffect } from "react";
+import itemsData from "../data/itemsData";
+import ItemList from "./itemList";
 
-function ItemListContainer({ text }) {
+function traerData() {
+    return new Promise((resolve) => {
 
-    return(
-        <div>
-            <h1>{ text }</h1>
-            <ItemCount initial={1} stock={10}/>
-        </div>
+        setTimeout(() =>
+            resolve(itemsData), 2000
+        );
+    });
+}
+
+
+const ItemListContainer = () => {
+    
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        traerData()
+            .then((respuesta) => {
+                setData(respuesta);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
+     
+    return (
+        <ItemList data={data}/>
     )
 };
 

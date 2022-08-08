@@ -9,10 +9,10 @@ function ItemCount({ initial, stock }) {
   const itemResta = () => { clicks === initial ? console.log("error") : setClicks(clicks - 1); };
 
   return (
-    <div className='row'>
-      <button className='col-lg-1' onClick={itemSuma}> + </button>
-      <h3 className='col-lg-1' > Items: {clicks} </h3>
-      <button className='col-lg-1' onClick={itemResta}> - </button>
+    <div className='row my-2'>
+      <button className='btn btn-primary btn-sm col-2 mx-auto' onClick={itemResta}> - </button>
+      <h3 className='col-4'> Cant: {clicks} </h3>
+      <button className='btn btn-primary btn-sm col-2 mx-auto' onClick={itemSuma}> + </button>
     </div>
   );
 }
