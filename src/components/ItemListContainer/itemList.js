@@ -9,6 +9,7 @@ function ItemList({ data }) {
             {data.map((item) => {
                 return (
                     <Item
+                        id={item.id}
                         key={item.titulo}
                         tipo={item.tipo}
                         titulo={item.titulo}

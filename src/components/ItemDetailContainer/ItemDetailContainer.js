@@ -1,19 +1,27 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import ItemData from "../data/itemsData";
 import ItemDetail from "./ItemDetail";
 
-function traerItem() {
-    return new Promise((resolve) => {
-
-        setTimeout(() =>
-            resolve(ItemData[2]), 2000
-        );
-    });
-}
 
 const ItemDetailContainer = () => {
 
     const [item, setItem] = useState([]);
+
+    const { id } = useParams();
+
+    function traerItem() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            let itemPedido = ItemData.find(
+              (producto) => producto.id === Number(id)
+            );
+    
+            if (itemPedido === undefined) reject("No encontramos el item");
+            else resolve(itemPedido);
+          }, 1000);
+        });
+      }
 
     useEffect(() => {
         traerItem()

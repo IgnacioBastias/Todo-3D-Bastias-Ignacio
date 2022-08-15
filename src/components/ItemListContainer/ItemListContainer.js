@@ -11,7 +11,6 @@ function traerData() {
     });
 }
 
-
 const ItemListContainer = () => {
     
     const [data, setData] = useState([]);
