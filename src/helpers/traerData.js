@@ -4,7 +4,7 @@ function traerData() {
     return new Promise((resolve) => {
 
         setTimeout(() =>
-            resolve(itemsData), 2000
+            resolve(itemsData), 1000
         );
     });
 }

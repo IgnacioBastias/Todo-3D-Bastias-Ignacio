@@ -12,7 +12,7 @@ function item({ titulo, precio, img, tipo, int, stk, id }) {
         <h2>{titulo}</h2>
         <p>{tipo}</p>
         <h3>$ {precio}</h3>
-        <Link to={`/detalle/${id}`}>
+        <Link to={`/item/${id}`}>
           <button className='btn btn-primary btn-sm col-2 mx-auto'> Ver mas </button>
         </Link>
         <ItemCount initial={int} stock={stk} />

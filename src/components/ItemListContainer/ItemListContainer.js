@@ -1,20 +1,25 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "./itemList";
 import traerData from "../../helpers/traerData";
-
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
 
     const [data, setData] = useState([]);
 
+    const category = useParams().idCategory;
+    console.log(category)
+
     useEffect(() => {
         traerData()
             .then((respuesta) => {
-                setData(respuesta);
+                if (category === undefined) {
+                    setData(respuesta)
+                } else {
+                    let filtrados = respuesta.filter(elemento => elemento.tipo === category)
+                    setData(filtrados)
+                };
             })
-            .catch((error) => {
-                console.log(error);
-            });
     }, []);
 
     return (
