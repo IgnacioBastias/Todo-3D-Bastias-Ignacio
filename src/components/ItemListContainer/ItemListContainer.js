@@ -1,18 +1,10 @@
 import React, { useState, useEffect } from "react";
-import itemsData from "../data/itemsData";
 import ItemList from "./itemList";
+import traerData from "../../helpers/traerData";
 
-function traerData() {
-    return new Promise((resolve) => {
-
-        setTimeout(() =>
-            resolve(itemsData), 2000
-        );
-    });
-}
 
 const ItemListContainer = () => {
-    
+
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -24,9 +16,9 @@ const ItemListContainer = () => {
                 console.log(error);
             });
     }, []);
-     
+
     return (
-        <ItemList data={data}/>
+        <ItemList data={data} />
     )
 };
 
