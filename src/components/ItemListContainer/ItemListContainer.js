@@ -20,7 +20,7 @@ const ItemListContainer = () => {
                     setData(filtrados)
                 };
             })
-    }, []);
+    });
 
     return (
         <ItemList data={data} />

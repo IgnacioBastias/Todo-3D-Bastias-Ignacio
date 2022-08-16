@@ -6,7 +6,7 @@ function item({ titulo, precio, img, tipo, int, stk, id }) {
   return (
     <div className="card col-3 m-5">
       <div className="card-img">
-        <img src={img} alt={titulo} className='m-2' />
+        <img src={img} alt={titulo} className='m-2' width="400px" height="300px" />
       </div>
       <div className="card-detail">
         <h2>{titulo}</h2>
