@@ -8,7 +8,6 @@ const ItemListContainer = () => {
     const [data, setData] = useState([]);
 
     const category = useParams().idCategory;
-    console.log(category)
 
     useEffect(() => {
         traerData()

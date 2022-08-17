@@ -1,8 +1,8 @@
 import React from 'react'
-import ItemCount from "./ItemCount";
+// import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 
-function item({ titulo, precio, img, tipo, int, stk, id }) {
+function item({ titulo, precio, img, tipo, id }) {
   return (
     <div className="card col-3 m-5">
       <div className="card-img">
@@ -13,11 +13,11 @@ function item({ titulo, precio, img, tipo, int, stk, id }) {
         <p>{tipo}</p>
         <h3>$ {precio}</h3>
         <Link to={`/item/${id}`}>
-          <button className='btn btn-primary btn-sm col-2 mx-auto'> Ver mas </button>
+          <button className='btn btn-primary btn-sm col-2 mx-auto my-3'> Ver mas </button>
         </Link>
-        <ItemCount initial={int} stock={stk} />
+        {/* <ItemCount initial={int} stock={stk} /> */}
       </div>
-    </div>
+    </div>  
   );
 }
 

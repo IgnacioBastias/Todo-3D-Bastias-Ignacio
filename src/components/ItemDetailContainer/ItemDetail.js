@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ItemCount from '../ItemListContainer/ItemCount';
 
 
-function ItemDetail({ titulo, precio, img, tipo, int, stk }) {
+function ItemDetail({ titulo, precio, img, tipo, stk }) {
+
+    const [quantity, setQuantity] = useState(0)
+
+    const handleAdd = (clicks) => {
+
+        console.log("Agregar al carrito", clicks)
+        setQuantity(clicks)
+
+    }
 
     return (
         <div class="card m-5">
@@ -22,7 +31,11 @@ function ItemDetail({ titulo, precio, img, tipo, int, stk }) {
                             a suscipit magna commodo. Proin sit amet nibh vel felis ultricies aliquam.
                         </p>
                         <h3>Precio : $ {precio}</h3>
-                        <ItemCount initial={int} stock={stk}/>
+
+                        {quantity === 0 ?
+                            <ItemCount initial={1} stock={stk} onAdd={handleAdd} /> :
+                            <button href='/cart' className='btn btn-primary btn-sm col-2 mx-auto my-3'> Ir al carrito </button>}
+
                     </div>
                 </div>
             </div>
