@@ -1,11 +1,15 @@
-import itemsData from "../components/data/itemsData";
+import itemsData from "../data/itemsData";
 
-function traerData() {
+function traerData(id) {
     return new Promise((resolve) => {
+        setTimeout(() => {
+            let itemPedido = itemsData.find(
+                (producto) => producto.id === Number(id)
+            );
 
-        setTimeout(() =>
-            resolve(itemsData), 1000
-        );
+            if (id === undefined) resolve(itemsData);
+            else resolve(itemPedido);
+        }, 1000);
     });
 }
 

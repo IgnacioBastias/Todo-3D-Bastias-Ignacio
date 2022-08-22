@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ItemData from "../data/itemsData";
 import ItemDetail from "./ItemDetail";
+import traerData from "../../helpers/traerData";
+
 
 
 const ItemDetailContainer = () => {
@@ -10,21 +11,8 @@ const ItemDetailContainer = () => {
 
   const { id } = useParams();
 
-  function traerItem() {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        let itemPedido = ItemData.find(
-          (producto) => producto.id === Number(id)
-        );
-
-        if (itemPedido === undefined) reject("No encontramos el item");
-        else resolve(itemPedido);
-      }, 1000);
-    });
-  }
-
   useEffect(() => {
-    traerItem()
+    traerData(id)
       .then((respuesta) => {
         setItem(respuesta);
       })
@@ -35,6 +23,7 @@ const ItemDetailContainer = () => {
 
   return (
     <ItemDetail
+      id={item.id}
       tipo={item.tipo}
       titulo={item.titulo}
       precio={item.precio}
