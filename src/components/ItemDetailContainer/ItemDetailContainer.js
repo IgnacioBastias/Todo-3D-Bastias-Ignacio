@@ -4,7 +4,6 @@ import ItemDetail from "./ItemDetail";
 import traerData from "../../helpers/traerData";
 
 
-
 const ItemDetailContainer = () => {
 
   const [item, setItem] = useState([]);

@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from "react-router-dom";
+import cartContext from '../../store/cartContext'
 
-function CartWidget({imgUrl}) {
+function CartWidget({ imgUrl }) {
 
-    return(
-        <Link to={`/cart`}>
-            <img src={imgUrl} width="60px" className='mx-5 my-2' />
-        </Link>
-        )
+    const { cart } = useContext(cartContext)
+
+    return (
+        <div className=' align-self-end mx-5'>
+
+            <Link to={`/cart`} > <img src={imgUrl} width="60px" className='my-2' /></Link>
+            {cart.length === 0 ? <div></div> : <div className='my-auto'> {cart.length}</div>}
+
+        </div>
+    )
 };
 
 export default CartWidget;

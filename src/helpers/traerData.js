@@ -1,4 +1,5 @@
 import itemsData from "../data/itemsData";
+import { getDocs, collection, query, where } from 'firebase/firestore'
 
 function traerData(id) {
     return new Promise((resolve) => {
@@ -14,3 +15,15 @@ function traerData(id) {
 }
 
 export default traerData;
+
+// const getItemsFromDB = () => {
+//     return new Promise((resolve) => {
+//       const todosCollection = collection(firestoreDB, "todos");
+  
+//       getDocs(todosCollection).then( snapshot => {
+//         const docsData = snapshot.docs.map( doc => doc.data());
+//         resolve(docsData);
+//         });
+//       })      
+//   };
+  

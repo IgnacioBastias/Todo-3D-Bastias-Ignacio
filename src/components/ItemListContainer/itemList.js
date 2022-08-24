@@ -3,11 +3,13 @@ import Item from "./item"
 
 function ItemList({ data }) {
     return (
-
-        <div className="row  mt-5">
-            <h2>Productos</h2>
+        
+        <div className="row  m-5 ">
+            
+            <h2 className='my-3'>Productos</h2>
             {data.map((item) => {
                 return (
+                
                     <Item
                         id={item.id}
                         key={item.titulo}

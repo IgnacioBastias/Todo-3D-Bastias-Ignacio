@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
+
 function item({ titulo, precio, img, tipo, id }) {
   return (
-    <div className="card col-3 m-5">
+    <div className="card col-4" id='item'>
       <div className="card-img">
         <img src={img} alt={titulo} className='m-2' width="400px" height="300px" />
       </div>

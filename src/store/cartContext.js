@@ -9,18 +9,23 @@ export function CartProvider({ children }) {
 
   function addItemToCart(item, quantity) {
 
-    console.log("ok!")
-    console.log(item, quantity)
-
     if (isInCart(item.id)) {
-      alert("El item ya esta en el carrito")
+      alert("El producto ya esta en el carrito")
     }
     else {
       let copyCart = [...cart];
-      copyCart.push({ ...item, quantity: quantity });
+      copyCart.push({ ...item, cant: quantity });
       setCart(copyCart)
-      console.log(cart)
     }
+  }
+
+
+  function deleteItem(id) {
+    setCart(cart.filter(item => item.id !== id))
+  }
+
+  function clearCart() {
+    setCart([])
   }
 
   function isInCart(id) {
@@ -30,7 +35,7 @@ export function CartProvider({ children }) {
   }
 
   return (
-    <cartContext.Provider value={{ cart, addItemToCart }}>
+    <cartContext.Provider value={{ cart, addItemToCart, deleteItem, clearCart }}>
       {children}
     </cartContext.Provider>
   );

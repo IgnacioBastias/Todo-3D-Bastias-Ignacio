@@ -18,7 +18,7 @@ function ItemCount({ initial, stock, onAdd }) {
         <button className='btn btn-primary btn-sm col-2 mx-auto' onClick={itemSuma}> + </button>
       </div>
       <div className='row my-2'>
-        <button className='btn btn-primary btn-sm col-2 mx-auto' onClick={ handleClick }> Finalizar Compra </button>
+        <button className='btn btn-primary btn-sm col-2 mx-auto' onClick={ handleClick }> Comprar </button>
       </div>
     </div>
   );
