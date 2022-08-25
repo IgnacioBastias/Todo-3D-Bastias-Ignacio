@@ -8,8 +8,7 @@ function ItemCart({ titulo, precio, img, cant, id }) {
 
     const { deleteItem } = useContext(cartContext)
 
-    const handleOnClick = () =>{
-
+    const handleOnClick = () => {
         deleteItem(id)
     }
 

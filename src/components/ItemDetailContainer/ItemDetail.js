@@ -6,7 +6,6 @@ import cartContext from '../../store/cartContext'
 function ItemDetail({ id, titulo, precio, img, tipo, stk }) {
 
     const { addItemToCart } = useContext(cartContext)
-
     const [quantity, setQuantity] = useState(0)
 
     const handleAdd = (clicks) => {

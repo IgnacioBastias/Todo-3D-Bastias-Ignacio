@@ -1,24 +1,25 @@
 import React, { createContext, useState } from "react";
 
-
 const cartContext = createContext();
+
 
 export function CartProvider({ children }) {
 
   const [cart, setCart] = useState([]);
+  let copyCart = [...cart];
 
   function addItemToCart(item, quantity) {
 
     if (isInCart(item.id)) {
-      alert("El producto ya esta en el carrito")
+      let itemNew = copyCart.find(newItem => newItem.id === item.id)
+      itemNew.cant += quantity;
+      setCart(copyCart)
     }
     else {
-      let copyCart = [...cart];
       copyCart.push({ ...item, cant: quantity });
       setCart(copyCart)
     }
   }
-
 
   function deleteItem(id) {
     setCart(cart.filter(item => item.id !== id))
