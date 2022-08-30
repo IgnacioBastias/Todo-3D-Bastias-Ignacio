@@ -9,14 +9,19 @@ function CartView() {
 
     return (
         <div>
-            {cart.length === 0 ? 
+            {cart.length === 0 ?
 
-            <div>
-                <h1 className="my-5">Carrito vacío</h1> 
-                <Link to={`/`}><button className='btn btn-primary btn-lg col-2 mx-auto my-5'>Comprar</button></Link>
-            </div>
+                <div>
+                    <div>
+                        <h1 className="my-5">Carrito vacío</h1>
+                        <img src="https://stonehouseathenry.ie/images/empty-cart.png" class="img-fluid rounded-start my-5" alt="Empty Cart" />
+                    </div>
+                    <div>
+                        <Link to={`/`}><button className='btn btn-primary btn-lg col-2 mx-auto my-5'>Comprar</button></Link>
+                    </div>
+                </div>
 
-            : <ItemsInCart Cart={cart} />}
+                : <ItemsInCart Cart={cart} />}
         </div>
     )
 }

@@ -10,16 +10,14 @@ const ItemListContainer = () => {
     const category = useParams().idCategory;
 
     useEffect(() => {
-        traerData()
+        traerData(null, category)
             .then((respuesta) => {
-                if (category === undefined) {
-                    setData(respuesta)
-                } else {
-                    let filtrados = respuesta.filter(elemento => elemento.tipo === category)
-                    setData(filtrados)
-                };
+                setData(respuesta)
             })
-    },[category]);
+            .catch((error) => {
+                console.log(error);
+            })
+    }, [category]);
 
     return (
         <ItemList data={data} />

@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
   }, []);
 
   return (
-    <ItemDetail
+      <ItemDetail
       id={item.id}
       tipo={item.tipo}
       titulo={item.titulo}
