@@ -9,7 +9,7 @@ function CartWidget({ imgUrl }) {
     return (
         <div className=' align-self-end mx-5'>
 
-            <Link to={`/cart`} > <img src={imgUrl} width="60px" className='my-2' /></Link>
+            <Link to={`/cart`} > <img src={imgUrl} width="60px" className='my-2' alt='carrito' /></Link>
             {cart.length === 0 ? <div></div> : <div className='my-auto'> {cart.length}</div>}
 
         </div>

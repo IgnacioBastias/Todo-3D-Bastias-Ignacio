@@ -20,9 +20,9 @@ function NavBar() {
                         <Link to={`/`} class="navbar-brand"> Home </Link>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <p class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Productos
-                            </a>
+                            </p>
                             <ul class="dropdown-menu">
                             <Link to={`/category/Impresora`} class="dropdown-item"> Impresoras </Link>
                             <Link to={`/category/Filamento`} class="dropdown-item"> Filamento </Link>

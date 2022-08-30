@@ -12,7 +12,7 @@ function ItemList({ data }) {
                 
                     <Item
                         id={item.id}
-                        key={item.titulo}
+                        key={item.id}
                         tipo={item.tipo}
                         titulo={item.titulo}
                         precio={item.precio}
