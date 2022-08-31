@@ -12,8 +12,8 @@ function ItemDetail({ id, titulo, precio, img, tipo, stk }) {
 
         const itemCart = { id, titulo, precio, img, tipo, stk}
         addItemToCart(itemCart , clicks)
-        setQuantity(clicks)
-
+        setQuantity(clicks) 
+        
     }
 
     return (

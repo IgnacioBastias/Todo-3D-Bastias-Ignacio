@@ -19,6 +19,7 @@ export function CartProvider({ children }) {
       copyCart.push({ ...item, cant: quantity });
       setCart(copyCart)
     }
+    
   }
 
   function deleteItem(id) {
