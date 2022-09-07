@@ -55,16 +55,12 @@ function UserForm() {
 
     if (order.complete === true) {
         return (
-            // <div>
-            //     <h1>Gracias por tu compra!</h1>
-            //     <p>El id de seguimiento de tu compra es: {order.id}</p>
-            // </div>
             <div class="card text-center w-50 position-absolute top-50 start-50 translate-middle">
                 <div class="card-header"></div>
                 <div class="card-body my-5">
                     <h5 class="card-title">¡Gracias por tu compra!</h5>
                     <p class="card-text">El id de seguimiento de tu compra es: {order.id}</p>
-                    <Link to={`/`}><button className='btn btn-primary btn-md mx-auto my-2'>Volver a comprar</button></Link>
+                    <Link to={`/`}><button className='btn btn-warning btn-md mx-auto my-2'>Volver a comprar</button></Link>
                 </div>
                 <div class="card-footer text-muted"></div>
             </div>
@@ -114,7 +110,7 @@ function UserForm() {
                 <div className="mt-5">
 
                     <button class="btn btn-danger btn-md mb-5 mx-3" type="reset"> Limpiar </button>
-                    <button class="btn btn-primary btn-md mb-5 mx-3" type="submit" onTouch={handleSubmit}> Finalizar Compra </button>
+                    <button class="btn btn-warning btn-md mb-5 mx-3" type="submit" onTouch={handleSubmit}> Finalizar Compra </button>
 
                 </div>
             </form>

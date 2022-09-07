@@ -17,7 +17,7 @@ function CartView() {
                         <img src="https://stonehouseathenry.ie/images/empty-cart.png" class="img-fluid rounded-start my-5" alt="Empty Cart" />
                     </div>
                     <div>
-                        <Link to={`/`}><button className='btn btn-primary btn-lg col-2 mx-auto my-5'>Comprar</button></Link>
+                        <Link to={`/`}><button className='btn btn-warning btn-lg col-2 mx-auto my-5'>Comprar</button></Link>
                     </div>
                 </div>
 

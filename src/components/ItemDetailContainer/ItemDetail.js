@@ -37,7 +37,7 @@ function ItemDetail({ id, titulo, precio, img, tipo, stk }) {
 
                         {quantity === 0 ?
                             <ItemCount initial={1} stock={stk} onAdd={handleAdd} /> :
-                            <Link to={'/cart'}><button className='btn btn-primary btn-sm col-2 mx-auto my-3'> Ir al carrito </button></Link>}
+                            <Link to={'/cart'}><button className='btn btn-warning btn-sm col-2 mx-auto my-3'> Ir al carrito </button></Link>}
 
                     </div>
                 </div>

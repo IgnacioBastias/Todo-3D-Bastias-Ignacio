@@ -1,6 +1,7 @@
 import React from 'react'
 import CartWidget from "./CartWidget"
 import carritoImg from "../../assets/img/cart.png"
+import favIcon from "../../assets/img/icon.png"
 import { Link } from "react-router-dom";
 
 
@@ -9,7 +10,7 @@ function NavBar() {
     return (
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-            <Link to={`/`} class="navbar-brand mx-5"> Todo 3D </Link>
+            <Link to={`/`} class="navbar-brand mx-5"> <img src={favIcon} width="60px" className='my-2' alt='icon' /></Link>
     
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

@@ -13,7 +13,7 @@ function item({ titulo, precio, img, tipo, id }) {
         <p>{tipo}</p>
         <h3>$ {precio}</h3>
         <Link to={`/item/${titulo}`}>
-          <button className='btn btn-primary btn-sm col-2 mx-auto my-3'> Ver mas </button>
+          <button className='btn btn-warning btn-sm col-2 mx-auto my-3'> Ver mas </button>
         </Link>
       </div>
     </div>  

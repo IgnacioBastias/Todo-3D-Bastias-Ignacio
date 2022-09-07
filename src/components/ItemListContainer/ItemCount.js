@@ -13,12 +13,12 @@ function ItemCount({ initial, stock, onAdd }) {
   return (
     <div>
       <div className='row my-2'>
-        <button className='btn btn-primary btn-sm col-2 mx-auto' onClick={itemResta}> - </button>
+        <button className='btn btn-warning btn-sm col-2 mx-auto' onClick={itemResta}> - </button>
         <h3 className='col-4'> Cant: {clicks} </h3>
-        <button className='btn btn-primary btn-sm col-2 mx-auto' onClick={itemSuma}> + </button>
+        <button className='btn btn-warning btn-sm col-2 mx-auto' onClick={itemSuma}> + </button>
       </div>
       <div className='row my-2'>
-        <button className='btn btn-primary btn-sm col-2 mx-auto' onClick={ handleClick }> Comprar </button>
+        <button className='btn btn-warning btn-sm col-2 mx-auto' onClick={ handleClick }> Comprar </button>
       </div>
     </div>
   );
