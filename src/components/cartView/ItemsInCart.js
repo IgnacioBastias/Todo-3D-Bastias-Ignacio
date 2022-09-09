@@ -34,7 +34,7 @@ function ItemsInCart({ Cart }) {
                 <h3 className='my-5'>Precio total: ${totalPrice} </h3>
             </div>
             <div>
-                <button type="button" class="btn btn-danger btn-md mb-5 mx-3" onClick={clearCart} >Vaciar carrito</button>
+                <Link to={`/cart`} ><button type="button" class="btn btn-danger btn-md mb-5 mx-3" onClick={clearCart} >Vaciar carrito</button></Link>
                 <Link to={`/form`} ><button type="button" class="btn btn-warning btn-md mb-5 mx-3">Finalizar compra</button></Link>
             </div>
         </div>
