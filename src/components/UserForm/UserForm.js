@@ -7,7 +7,8 @@ import { Link } from "react-router-dom";
 
 function UserForm() {
 
-    const { cart } = useContext(cartContext)
+    const { cart, clearCart } = useContext(cartContext)
+
 
     const [userData, setUserData] = useState({
         name: "",
@@ -38,6 +39,7 @@ function UserForm() {
         const collectionRef = collection(firestoreDB, "orders");
         const order = await addDoc(collectionRef, ordenDeCompra);
         setOrder({ id: order.id, complete: true });
+        clearCart();
 
     }
 
